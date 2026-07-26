@@ -70,6 +70,7 @@ img{
     background: rgba(5,25,35,0.65);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .logo a{
@@ -284,7 +285,7 @@ header{
 
     display: grid;
 
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
 
     gap: 30px;
 
@@ -303,6 +304,8 @@ header{
     padding: 35px;
 
     border-radius: 20px;
+
+    height: auto;
 
     transition: var(--transition);
 
@@ -337,7 +340,158 @@ header{
 
     border-color: var(--bg-secondary);
 
-    box-shadow:
-    0 10px 30px rgba(0,166,251,0.2);
+    box-shadow: 0 10px 30px rgba(0,166,251,0.2);
+
+}
+
+/* =========================
+   PROJECT SECTION
+========================= */
+
+
+.projects{
+
+    padding:100px 0;
+
+}
+
+
+.projects-container{
+
+    display:grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.project-card{
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    transition:var(--transition);
+
+    /* backdrop-filter:blur(10px); */
+
+}
+
+.project-content{
+
+    padding:25px;
+
+}
+
+
+.project-card h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:15px;
+
+    color:white;
+
+}
+
+
+.project-card p{
+
+    color: rgba(255,255,255,0.75);
+
+    line-height:1.7;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--bg-secondary);
+
+}
+
+/* =========================
+   RESUME SECTION
+========================= */
+
+
+.resume{
+
+    padding:100px 0;
+
+}
+
+
+
+.resume-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:50px;
+
+}
+
+.resume-column h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:30px;
+
+}
+
+
+.resume-item{
+
+    background:
+    rgba(255,255,255,0.05);
+
+
+    border-left:
+    3px solid var(--bg-secondary);
+
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-radius:10px;
+
+}
+
+
+.resume-item h3{
+
+    margin-bottom:10px;
+
+}
+
+
+.resume-item span{
+
+    color:
+    var(--bg-secondary);
+
+    font-size:0.95rem;
+
+}
+
+
+.resume-item p{
+
+    margin-top:15px;
+
+    color:
+    rgba(255,255,255,0.75);
+
+    line-height:1.6;
 
 }
