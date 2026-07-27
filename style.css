@@ -31,7 +31,8 @@ html{
 
 body{
     color: var(--text-primary);
-    background: linear-gradient(
+    /* background: var(--bg-primary); */
+        background: linear-gradient(
         160deg,
         #000d16,
         #0A2A38,
@@ -46,8 +47,10 @@ body{
         #103B4F
         */
     );
+
     margin: 0;
     min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 
@@ -98,7 +101,7 @@ header{
 /* home section */
 .home{
     min-height: calc(100vh - 80px);
-
+    padding: 0 70px;
     display: flex;
     align-items: center;
 }
@@ -106,15 +109,14 @@ header{
 
 .home-container{
 
-    /* width: min(90%,1200px); */
-    width: relative;
+    width: 100%;
     margin: auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 300px;
+    gap: 50px;
 }
 
 .home-image{
@@ -125,7 +127,7 @@ header{
 .home-image img{
 
     width: 380px;
-    height: 480px;
+    height: 460px;
 
     object-fit: cover;
     object-position: center 30%;
@@ -173,9 +175,16 @@ header{
 }
 
 
+
+
 .home-content{
-    flex: 1;
+
+    margin:10px auto;
+    padding: auto;
+
+    /* width: 100%; */
 }
+
 
 
 .home-content h1{
@@ -251,7 +260,7 @@ header{
 
     text-align: center;
 
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 
 }
 
@@ -372,7 +381,7 @@ header{
 
     border: 1px solid rgba(255,255,255,0.1);
 
-    padding:35px;
+    padding:20px;
 
     border-radius:20px;
 
@@ -384,9 +393,10 @@ header{
 
 .project-content{
 
-    padding:25px;
+    padding: 25px;
 
 }
+
 
 
 .project-card h3{
@@ -426,7 +436,78 @@ header{
     padding:100px 0;
 
 }
+.timeline{
+    position: relative;
 
+    max-width: auto;
+
+    margin: auto;
+}
+
+.timeline::before{
+    content: "";
+
+    position:absolute;
+
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.timeline-item{
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 60px;
+}
+
+.timeline-marker{
+    position: absolute;
+
+    left: 0;
+    top: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+
+.timeline-content h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:8px;
+
+}
+
+.timeline-content h3 span{
+
+    color:var(--bg-secondary);
+
+    font-weight:500;
+
+}
+
+.timeline-content h4{
+
+    color:rgba(255,255,255,0.6);
+
+    margin-bottom:18px;
+
+    font-weight:400;
+
+}
+
+.timeline-content p{
+
+    color:rgba(255,255,255,0.8);
+
+    line-height:1.8;
+
+    max-width:700px;
+
+}
 
 
 .resume-container{
@@ -436,14 +517,14 @@ header{
     grid-template-columns:
     repeat(2,1fr);
 
-    gap:50px;
+    gap:30px;
 
 }
 
 .resume-column h2{
 
     font-size:1.8rem;
-
+    padding: auto;
     margin-bottom:30px;
 
 }
@@ -451,17 +532,15 @@ header{
 
 .resume-item{
 
-    background:
-    rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.05);
 
 
-    border-left:
-    3px solid var(--bg-secondary);
+    border-left: 2px solid var(--bg-secondary);
 
 
-    padding:25px;
+    padding:20px;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
     border-radius:10px;
 
@@ -477,8 +556,8 @@ header{
 
 .resume-item span{
 
-    color:
-    var(--bg-secondary);
+    color: var(--bg-secondary);
+    /* font-family: 'Goeirgia'; */
 
     font-size:0.95rem;
 
@@ -489,9 +568,72 @@ header{
 
     margin-top:15px;
 
-    color:
-    rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.75);
 
     line-height:1.6;
+
+}
+
+/* tech stack */
+.tech-stack{
+    padding:100px 0;
+}
+
+.tech-list{
+    margin-top: 50px;
+}
+
+.tech-row{
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tech-row h3{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.tech-row{
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.tech-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tech-card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    border-left: 2px solid var(--bg-secondary);
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.tech-tags{
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 15px;
+    gap: 12px;
+}
+
+.tech-tags span{
+
+    padding: 8px 16px;
+
+    background: rgba(0,100,148,0.2);
+
+    border: 1px solid rgba(0,166,251,0.3);
+
+    border-radius: 50px;
+
+    color: var(--text-primary);
+
+    font-size: 0.9rem;
 
 }
