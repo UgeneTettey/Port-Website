@@ -434,17 +434,27 @@ header{
 
     display:grid;
 
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1.6fr 1fr;
+    /* repeat(2,1fr); */
 
     gap:30px;
+    align-items: start;
 
+}
+
+.resume-subtitle{
+    font-size: 1.6rem;
+    /* margin: */
+    color: #979fb1;
 }
 
 /* Timeline Track */
 .resume-timeline {
   position: relative;
   max-width: 680px;
-  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  /* margin: 0 auto; */
 }
 
 /* Vertical Line */
@@ -511,3 +521,91 @@ header{
   color: #848b9b; /* Muted gray body text */
   line-height: 1.6;
 }
+
+/* education  */
+/* .education{
+    margin-top: 15px;
+    margin-bottom: 15px;
+} */
+
+.education-item h3{
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: white;
+    /* margin-bottom: 30px; */
+
+}
+
+.school{
+    color: var(--accent);
+}
+
+.year{
+    display: block;
+    color:#848b9b;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9rem;
+}
+
+
+/* tech stack */
+.tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* badges for tech stack */
+.tech-stack span{
+    padding: 10px;
+    border-radius: 20px;
+    background:rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: .3s;
+}
+
+.tech-stack span:hover{
+    border-color: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
+
+hr{
+    border: none;
+    height: 0.5px;
+    background: var(--accent);
+    margin-bottom: 15px;
+    /* color: #006494; */
+}
+
+.certifications{
+    margin-top: 12px;
+    display: flex;
+    gap: 18px;
+}
+
+.cert-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+.cert-item i{
+    color: var(--accent);
+    font-size: 1.1rem;
+    width: 22px;
+}
+
+.cert-provider{
+    display: block;
+    color: #979fb1;
+    font-size: 1.1rem;
+}
+
+/* .cert-item span{
+    color: var(--accent);
+} */
