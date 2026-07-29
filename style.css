@@ -602,10 +602,53 @@ hr{
 
 .cert-provider{
     display: block;
-    color: #979fb1;
+    color: #979fb1; 
     font-size: 1.1rem;
 }
 
 /* .cert-item span{
     color: var(--accent);
 } */
+
+.row {
+    margin: 8px -16px;
+}
+
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: var(--accent);
+    padding: 10px;
+}
+
+/* responsive layout */
+@media screen and (max-width: 900px) {
+    .column {width: 50%;}
+}
+
+
+@media screen and (max-width: 600px) {
+    .column {width: 100%;}
+}
+
+/* thumbnail */
+
+
+
+.t-img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
