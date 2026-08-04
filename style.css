@@ -580,6 +580,8 @@ hr{
     /* color: #006494; */
 }
 
+/*MY CERTIFICATIONS */
+
 .certifications{
     margin-top: 12px;
     display: flex;
@@ -594,61 +596,87 @@ hr{
     font-size: 1.3rem;
 }
 
+.cert-card{
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: var(--transition);
+    display: block;
+
+}
+
+
+
+.cert-card p{
+    color: #979fb1;
+    font-size: 1.1rem;
+}
+
+.cert-card:hover{
+    transform: translateY(-2px);
+    border-color: var(--bg-secondary);
+}
+
 .cert-item i{
     color: var(--accent);
     font-size: 1.1rem;
-    width: 22px;
 }
 
 .cert-provider{
-    display: block;
+    display: flex;
     color: #979fb1; 
+    font-size: 0.2rem;
+}
+
+
+.cert-item span{
+    display: flex;
+    color: var(--accent);
     font-size: 1.1rem;
 }
 
-/* .cert-item span{
-    color: var(--accent);
-} */
-
-.row {
+/*
+==================================================================
+NEW PROJECT PORTFOLIO GALLERY 
+==================================================================
+*/
+.row{
     margin: 8px -16px;
 }
 
+/* this adds padding between each column */
 .row,
-.row > .column {
+.row > .column{
     padding: 8px;
 }
 
+/* this will create 4 columns that float next to each other */
 .column {
     float: left;
-    width: 25%;
+    width:25%;
 }
 
-.row::after {
+/* clear floats after rows --but why?*/
+.row:after{
     content: "";
     display: table;
     clear: both;
 }
 
-.content {
-    background-color: var(--accent);
+/* content */
+.content{
+    background-color: var(--bg-primary);
     padding: 10px;
 }
 
-/* responsive layout */
+
+/* responsive layout -  this makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
     .column {width: 50%;}
 }
 
-
+/* responsive layout - this makes the two columns stack on top of each other */
 @media screen and (max-width: 600px) {
     .column {width: 100%;}
-}
-
-/* thumbnail */
-
-
-
-.t-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
