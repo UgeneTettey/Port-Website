@@ -367,13 +367,38 @@ header{
 }
 
 
-.projects-container{
+.project-container{
 
     display:grid;
 
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
 
-    gap:30px;
+    gap:25px;
+
+}
+
+/* to make the container responsive */
+
+/* ...for tablets */
+@media screen and (max-width: 1100px){
+
+    .project-container{
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* for phones */
+@media screen and (max-width: 600px){
+
+    .project-container{
+
+        grid-template-columns: 1fr;
+
+    }
 
 }
 
@@ -383,9 +408,10 @@ header{
 
     border: 1px solid rgba(255,255,255,0.1);
 
-    padding:20px;
+    /* padding:20px; */
 
-    border-radius:20px;
+    border-radius:18px;
+    overflow:hidden;
 
     transition:var(--transition);
 
@@ -393,9 +419,23 @@ header{
 
 }
 
+.project-image{
+    width:100%;
+    height: 180px;
+    overflow:hidden;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    /* object-position:center; */
+    transition:var(--transition);
+}
+
 .project-content{
 
-    padding: 25px;
+    padding: 20px;
 
 }
 
@@ -403,9 +443,9 @@ header{
 
 .project-card h3{
 
-    font-size:1.5rem;
+    font-size:1.2rem;
 
-    margin-bottom:15px;
+    margin-bottom:12px;
 
     color:white;
 
@@ -416,16 +456,21 @@ header{
 
     color: rgba(255,255,255,0.75);
 
-    line-height:1.7;
+    line-height:1.6;
+    font-size: 0.92rem;
 
 }
 
 .project-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 
     border-color:var(--bg-secondary);
 
+}
+
+.project-card:hover .project-image img{
+    transform:scale(1.06);
 }
 
 
@@ -636,47 +681,3 @@ hr{
     font-size: 1.1rem;
 }
 
-/*
-==================================================================
-NEW PROJECT PORTFOLIO GALLERY 
-==================================================================
-*/
-.row{
-    margin: 8px -16px;
-}
-
-/* this adds padding between each column */
-.row,
-.row > .column{
-    padding: 8px;
-}
-
-/* this will create 4 columns that float next to each other */
-.column {
-    float: left;
-    width:25%;
-}
-
-/* clear floats after rows --but why?*/
-.row:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* content */
-.content{
-    background-color: var(--bg-primary);
-    padding: 10px;
-}
-
-
-/* responsive layout -  this makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-    .column {width: 50%;}
-}
-
-/* responsive layout - this makes the two columns stack on top of each other */
-@media screen and (max-width: 600px) {
-    .column {width: 100%;}
-}
