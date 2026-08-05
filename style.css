@@ -22,6 +22,10 @@ ul{
     list-style: none;
 }
 
+h1, h2, h3{
+    font-family: "Outfit", sans-serif;
+}
+
 
 /* page style */
 html{
@@ -61,7 +65,8 @@ img{
 
 .container{
     /* width:min(90%,1200px); */
-    width: 85%;
+    /* width: 80%; */
+    width: min(85%, 1200px);
     margin:auto;
 }
 
@@ -115,13 +120,14 @@ header{
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
+    justify-content: space-evenly;
+    gap: 60px;
 }
 
 .home-image{
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -134,10 +140,6 @@ header{
     object-position: center 30%;
 
     border-radius: 10%;
-    position: relative;
-    transform: translateX(250px);
-    /* z-index: -1; */
-
     border: 5px solid rgba(255,255,255,0.1);
 }
 
@@ -181,9 +183,10 @@ header{
 
 .home-content{
 
-    margin:10px auto;
-    padding: auto;
-
+    /* margin:10px auto; */
+    /* padding: auto; */
+    flex: 1;
+    max-width: 600px;
     /* width: 100%; */
 }
 
@@ -192,12 +195,13 @@ header{
 .home-content h1{
     font-size: 3rem;
     margin-bottom: 15px;
+    /* font-family: "'Outfit', sans-serif"; */
 }
 
 
 .home-content h3{
 
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--accent);
     margin-top: 8px;
     margin-bottom: 10px;
@@ -211,7 +215,7 @@ header{
 
     color: rgba(255,255,255,0.8);
 
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 .home-buttons{
@@ -260,31 +264,28 @@ header{
 
 .section-title{
 
-    text-align: center;
-
+    text-align: left;
     margin-bottom: 50px;
 
 }
 
 
-.section-title h2{
+.section-title h1{
 
     font-size: 2.5rem;
-
     margin-bottom: 15px;
+    /* font-family: "Outfit", sans-serif; */
 
 }
 
 
 .section-title p{
 
-    color: rgba(255,255,255,0.75);
-
-    max-width: 600px;
-
+    color: rgba(141, 138, 138, 0.75);
     margin: auto;
-
     line-height: 1.6;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.95rem;
 
 }
 
@@ -603,10 +604,10 @@ header{
 }
 
 /* education  */
-/* .education{
+.education{
     margin-top: 15px;
-    margin-bottom: 15px;
-} */
+    margin-bottom: 60px;
+}
 
 .education-item h3{
     margin-top: 15px;
