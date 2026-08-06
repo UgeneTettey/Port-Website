@@ -657,8 +657,9 @@ hr{
 
 .certifications{
     margin-top: 12px;
-    display: flex;
+    display: block;
     gap: 18px;
+    
 }
 
 .cert-item{
@@ -676,6 +677,7 @@ hr{
     border-radius: 10px;
     transition: var(--transition);
     display: block;
+    margin-bottom: 15px;
 
 }
 
@@ -683,7 +685,7 @@ hr{
 
 .cert-card p{
     color: var(--accent);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .cert-card:hover{
@@ -692,14 +694,15 @@ hr{
 }
 
 .cert-item i{
-    color: #979fb1;
+    color: #805b10;
     font-size: 1.1rem;
 }
 
-.cert-provider{
-    display: flex;
+.cert-provider {
+    /* display: flex; */
     /* color: var(--accent);  */
-    font-size: 0.2rem;
+    font-size: 1.2rem;
+    align-items: right;
 }
 
 
@@ -708,4 +711,59 @@ hr{
     color: white;
     font-size: 1.1rem;
 }
+
+
+/* 
+=================
+CONTACT SECTION
+==================
+*/
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-info p{
+
+    font-size: 1rem;
+    line-height: normal;
+    color: #848b9b;
+}
+
+.contact-details {
+    display: block;
+    align-items: center;
+}
+
+.contact-item i{
+    /* color: var(--accent); */
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    color: #848b9b;
+    /* display:block; */
+}
+
+
+
+.contact-item span {
+    font-size: 1rem;
+    margin: 15px auto;
+    color: #f5f5f5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
 
