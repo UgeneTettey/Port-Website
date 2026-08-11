@@ -228,6 +228,7 @@ header{
 
     margin-top: 30px;
 
+
     display: flex;
     gap: 20px;
 }
@@ -236,8 +237,8 @@ header{
 .btn,
 .btn-outline{
 
-    padding: 12px 12px;
-    border-radius: 15px;
+    padding: 6px 9px;
+    border-radius: 6px;
     transition: var(--transition);
 }
 
@@ -827,7 +828,7 @@ hr{
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 7px;
     transition: var(--transition);
     display: block;
     margin-bottom: 15px;
@@ -943,16 +944,31 @@ CONTACT SECTION
 
 .input-group {
     margin-bottom: 20px;
+    /* background-color: #373b41; */
+}
+
+.input-group p{
+    font-size: 0.9rem;
+    color: rgba(141, 138, 138, 0.75);
+    line-height: 1.6;
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 8px;
+    /* align-items: center; */
+
 }
 
 .input-group input,
 .input-group textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid var(--accent);
-    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 7px;
     transition: 0.3s;
     outline: none;
+    /* background-color: var(--bg-primary); */
+    /* background: rgba(255,255,255,0.05); */
+    background: rgba(255,255,255,0.1);
+    color: white;
 
 }
 
@@ -972,9 +988,9 @@ button {
     padding: 15px;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
     cursor: pointer;
-    background-color: #373b41;
+    background-color: rgba(255,255,255,0.1);
 
 }
 
