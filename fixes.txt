@@ -1,0 +1,26 @@
+DOCUMENTATION OF FIXES FOR VERSION II
+
+1. Navigation bar responsiveness (phone)
+	- all buttons showing on screen
+	- navbar to remain sticky upon section selection
+	
+2. Spacing & Uniformity
+	- Hero section space from navbar
+	- picture space/homes section space from 	services
+	- major spacing between sections
+
+3. Hero section
+	- improve button contrast with background
+	- or, use accent as button color
+	- Prevent image from resizing when in 		responsive. Keep as it is
+	- add KPI metrics? No. of projects, etc.
+
+3. Contact Form
+	- enhance appearance of form
+	- mailto service.
+	- Add socials: linkedIn, IG, Medium
+
+4. Page Strictness to fit screen
+
+
+
