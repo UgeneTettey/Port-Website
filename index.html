@@ -16,8 +16,12 @@
         <nav class = "navbar">
             <div class = "logo">
                 <!-- <img src="images/wolf.jpg" alt="logo"> -->
-                <!-- <a href = "#">Eugene Tettey Ayerkain</a> -->
+                <a href = "#">Eugene Tettey Ayerkain</a>
             </div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
 
             <ul class = "nav-links">
                 <li><a href = "#home">Home</a></li>
@@ -403,23 +407,40 @@
 
                 <div class="contact-right">
                     <form action="#" method="post">
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <p>Name</p>
                             <input type="text" name="name" placeholder="Your Name" required>
+                        </div> -->
+
+                        <div class="input-group">
+                            <p>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="wolf kane">
+                            </p>
+
                         </div>
 
                         <div class="input-group">
-                            <p> Email </p>
-                            <input type="email" name="email" placeholder="email" required>
+                            <p>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="user@xmail.com">
+                            </p>
                         </div>
 
                         <div class="input-group">
-                            <p>Leave a message</p>
-                            <textarea type="text" name="message"  rows="6">
-                            </textarea>
+                            <p>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" cols="40" 
+                                    placeholder="Tell me about you data/AI goals"></textarea> 
+                            </p>
                         </div>
 
-                        <button type="submit">Send Message</button>
+                        <p>
+                            <button type="submit">Send Message</button>
+                        </p>
+
+                        <!-- <button type="submit">Send Message</button> -->
+                        
                     </form>
 
                 </div>

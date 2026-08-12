@@ -38,9 +38,15 @@ body{
     /* background: var(--bg-primary); */
         background: linear-gradient(
         160deg,
+
         #000d16,
         #0A2A38,
         #000d16
+
+        /* #0A2A38,
+        #000d16,
+        #0A2A38 */
+
         /* 
         #000d16
         #0A2A38
@@ -60,12 +66,11 @@ body{
 
 img{
     max-width:100%;
-    display:block;
+    /* display:block; */
+    display: flex;
 }
 
 .container{
-    /* width:min(90%,1200px); */
-    /* width: 80%; */
     width: min(85%, 1200px);
     margin:auto;
 }
@@ -75,7 +80,7 @@ img{
     /* width: 100%; */
     justify-content: space-between;
     align-items: center;
-    padding: 15px 80px;
+    padding: 15px 7.5%;
     border-bottom: 1px solid rgba(255,255,255,0.08);
     background: rgba(5,25,35,0.65);
     backdrop-filter: blur(15px);
@@ -84,9 +89,9 @@ img{
 }
 
 .logo a{
-    font-size: 1.8rem;
+    font-size: .9rem;
     font-weight: bold;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Outfit", sans-serif;
     color: var(--text-primary);
 }
 
@@ -102,8 +107,42 @@ img{
 header{
     position: sticky;
     top: 0;
-    width: auto;
-    z-index: 100;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;  
+}
+
+.menu-toggle:hover{
+    /* background-color: none; */
+    background: none;
+}
+
+/* for mobile responsivness-- menu toggle used here */
+@media screen and (max-width: 600px) {
+
+    .navbar{
+        padding: 12px 5%;
+    }
+
+    .logo a {
+        font-size: .8rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .nav-links{
+        display: none;
+    }
 }
 
 /* home section */
@@ -952,7 +991,7 @@ CONTACT SECTION
     color: rgba(141, 138, 138, 0.75);
     line-height: 1.6;
     font-family: "JetBrains Mono", monospace;
-    margin-bottom: 8px;
+    /* margin-bottom: 10px; */
     /* align-items: center; */
 
 }
